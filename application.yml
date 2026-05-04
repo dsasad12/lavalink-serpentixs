@@ -1,13 +1,11 @@
-server: # Configuración del servidor
+server:
   port: 8080
   address: 0.0.0.0
 lavalink:
-plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.4"
   server:
-    password: "tu_contrasena_segura" # Cambia esto por lo que quieras
+    password: "tu_contrasena_segura"
     sources:
-      youtube: true
+      youtube: false # Se pone en false porque el plugin se encarga ahora
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -26,6 +24,8 @@ plugins:
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     scSearchEnabled: true
+  plugins: # Mantenlo alineado con 'server'
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.4"
 metrics:
   prometheus:
     enabled: false
