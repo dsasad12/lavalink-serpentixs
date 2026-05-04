@@ -2,6 +2,8 @@ server: # Configuración del servidor
   port: 8080
   address: 0.0.0.0
 lavalink:
+plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.11.4"
   server:
     password: "tu_contrasena_segura" # Cambia esto por lo que quieras
     sources:
